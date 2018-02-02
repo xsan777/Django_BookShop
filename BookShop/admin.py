@@ -28,4 +28,4 @@ class Size(admin.ModelAdmin):
     list_display = ['size']
 @admin.register(Lunbo)
 class Lunbo(admin.ModelAdmin):
-    list_display = ['lunbo']
+    list_display = ['img']
