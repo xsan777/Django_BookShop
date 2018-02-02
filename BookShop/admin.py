@@ -1,7 +1,21 @@
 from django.contrib import admin
-
+from BookShop.models import *
 # Register your models here.
-from .models import Classification
+# from .models import Classification
+
+@admin.register(Classification)
 class CFAdmin(admin.ModelAdmin):
+    cname=Classification.cname
+    cname.short_description = '分类名'
     list_display = ['cname']
-admin.site.register(Classification,CFAdmin)
+
+
+@admin.register(BookName)
+class BNAdmin(admin.ModelAdmin):
+    list_display = ['bname', 'cfname']
+@admin.register(Chapter)
+class chadmin(admin.ModelAdmin):
+    list_display = ['clist','ccontent','cbook']
+@admin.register(Size)
+class Size(admin.ModelAdmin):
+    list_display = ['size']

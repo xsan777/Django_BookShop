@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ book_name }}</title>
+</head>
+<body>
+{#取出所有章节名#}
+{% for item in chapter %}
+    <a href="/chapter/{{ item.id }}/"><li>{{ item.clist }}</li></a>
+
+{% endfor %}
+
+</body>
+</html>
