@@ -8,7 +8,7 @@
 {#取出所有书名#}
 {% for item in book %}
     <a href="book/{{ item.id }}/"><li>{{ item.bname }}</li></a>
-
+    <img src="{{ item.img }}" alt="1111">
 {% endfor %}
 
 {#<p>{{ book }}</p>#}
