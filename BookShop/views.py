@@ -7,8 +7,10 @@ from .models import *
 # 列出书名，并超链接到章节目录
 def index(request):
     book = BookName.objects.all()
+    lunbo=Lunbo.objects.all()
+    classify=Classification.objects.all()
 
-    return render(request, 'index.html', {'book': book})
+    return render(request, 'index.html', {'book': book,'lunbo':lunbo,'classify':classify})
 
 
 # 列出章节目录

@@ -56,8 +56,7 @@ class Chapter(models.Model):
 class Lunbo(models.Model):
     class Meta:
         db_table = 'lunbo'
-
+    name=models.CharField(r'图片名',max_length=20)
     img = models.ImageField(r'轮播图片',upload_to='static/bookshop/img/lunbo')
-
     def __str__(self):
-        return self.img
+        return self.name
