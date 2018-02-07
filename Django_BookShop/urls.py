@@ -20,8 +20,8 @@ from BookShop import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index,name='index'),
-    # path('book/<str:book_id>/',views.book),
-    # path('book/1/',views.test),
+    path('test1/',views.test1),
+    path('test/',views.test),
     re_path(r'^book/(?P<book_id>(\d+))/$',views.book),
     re_path(r'^chapter/(?P<chapter_id>(\d+))/',views.chapter)
 ]

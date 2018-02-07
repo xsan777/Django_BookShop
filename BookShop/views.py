@@ -7,10 +7,10 @@ from .models import *
 # 列出书名，并超链接到章节目录
 def index(request):
     book = BookName.objects.all()
-    lunbo=Lunbo.objects.all()
-    classify=Classification.objects.all()
+    lunbo = Lunbo.objects.all()
+    classify = Classification.objects.all()
 
-    return render(request, 'index.html', {'book': book,'lunbo':lunbo,'classify':classify})
+    return render(request, 'index.html', {'book': book, 'lunbo': lunbo, 'classify': classify, 'title': '首页'})
 
 
 # 列出章节目录
@@ -32,3 +32,23 @@ def chapter(request, chapter_id):
     chapter.save()
 
     return render(request, 'content.html', {'chapter': chapter, 'content': content})
+
+
+def test1(request):
+    book = BookName.objects.all()
+    lunbo = Lunbo.objects.all()
+    classify = Classification.objects.all()
+
+    return render(request, 'test2.html', {'book': book, 'lunbo': lunbo, 'classify': classify})
+
+
+# {'book': book,'lunbo':lunbo,'classify':classify,'title':'首页'}
+
+
+
+def test(request):
+    book = BookName.objects.all()
+    lunbo = Lunbo.objects.all()
+    classify = Classification.objects.all()
+
+    return render(request, 'test.html', {'classify': classify})

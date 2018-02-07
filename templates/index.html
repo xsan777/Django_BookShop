@@ -1,12 +1,32 @@
 {% extends "base.html" %}
+{% block head %}
+    <script type="text/javascript" src="/static/bookshop/js/swiper-4.1.0.min.js"></script>
+    <link rel="stylesheet" href="/static/bookshop/css/swiper-4.1.0.min.css">
+    <link rel="stylesheet" href="/static/bookshop/css/index.css"/>
+    <script src="/static/bookshop/js/index.js"></script>
+{% endblock head %}
+{% block content %}
+    <div class="swiper">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                {% for foo in lunbo %}
+                    <div class="swiper-slide"><img id="lunbo" src="{{ foo.img }}" alt="轮播图"></div>
 
-{#取出所有书名#}
-{% for item in book %}
-    <a href="book/{{ item.id }}/"><li>{{ item.bname }}</li></a>
-    <img src="{{ item.img }}" alt="1111">
-{% endfor %}
-{% for foo in lunbo %}
-<img src="{{ foo.img }}" alt="轮播图">
-{% endfor %}
+                {% endfor %}
+            </div>
+            {#导航分页器#}
+            <div class="swiper-pagination"></div>
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev" id="wheel_button"></div>
+            <div class="swiper-button-next" id="wheel_button"></div>
+        </div>
+    </div>
+
+    {#取出所有书名#}
+    {#{% for item in book %}#}
+    {#    <a href="book/{{ item.id }}/"><li>{{ item.bname }}</li></a>#}
+    {#    <img src="{{ item.img }}" alt="1111">#}
+    {#{% endfor %}#}
 
 
+{% endblock content %}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/bookshop/css/test.css"/>
+    <title>测试</title>
+</head>
+<body>
+<nav>
+<div>
+    <ul>
+     <li>
+                <a id="logo"  href="#"><strong>Xsan书城</strong></a>
+            </li>
+        {% for foo in classify %}
+            <li>
+                <a href="#"><strong>{{ foo.cname }}</strong></a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+</nav>
+
+</body>
+</html>
+
+{#Not Found: /test/static/bookshop/img/lunbo/3_caf6KVd.jpg#}

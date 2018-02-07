@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="/static/bookshop/css/swiper-4.1.0.min.css">
+
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-9 " id="box">
+            <div id="div_lunbo">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                {% for foo in lunbo %}
+                    <div class="swiper-slide"><img id="lunbo" src="{{ foo.img }}" alt="轮播图"></div>
+                {% endfor %}
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+          </div>
+        </div>
+        <!-- Swiper -->
+{#        <div class="swiper-container">#}
+{#            <div class="swiper-wrapper">#}
+{#                <div class="swiper-slide"><img src="/static/bookshop/img/lunbo/1.jpg" alt=""></div>#}
+{#                <div class="swiper-slide"><img src="/static/bookshop/img/lunbo/2.jpg" alt=""></div>#}
+{#                <div class="swiper-slide">Slide 3</div>#}
+{#            </div>#}
+{#            <!-- Add Arrows -->#}
+{#            <div class="swiper-button-next"></div>#}
+{#            <div class="swiper-button-prev"></div>#}
+{#        </div>#}
+        <!-- Swiper JS -->
+        <script type="text/javascript" src="/static/bookshop/js/swiper-4.1.0.min.js"></script>
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        </script>
+
+</body>
+</html>
