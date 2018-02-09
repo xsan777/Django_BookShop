@@ -1,8 +1,99 @@
-.swiper{
-    /*margin-top: 20rem;*/
-    margin: 14rem auto;
+.box1 {
+    width: 980px;
+    height: auto;
+    padding: 0px 10px;
+    margin: 120px auto 0 auto;
+    background-color: white;
+    /*background: -moz-linear-gradient(top, #3690de 200px, #fff 800px);*/
+    /*background: -webkit-gradient(linear, 0 0, 100% 100%, from(#3690de), to(#fff));*/
+    background: -webkit-linear-gradient(top, #3690de 200px, #fff 800px);
+    /*background: -o-linear-gradient(top, #3690de 200px, #fff 800px);*/
+    /*background: linear-gradient(top, #3690de 200px, #fff 800px);*/
+    z-index: 1;
+}
+
+.zuixin {
+    top: 120px;
+    left: 160px;
+    width: 176px;
+    height: 176px;
+    margin: -10px 0 0 -10px;
+    overflow: hidden;
+    position: absolute;
+}
+
+#zuihuo {
+    color: #de5858;
+    width: 250px;
+    height: 84px;
+    margin: 17px 0 0 -68px;
+    z-index: 2;
+    font-size: 36px;
+    transform: rotate(-45deg);
+    text-align: center;
+    line-height: 84px;
+    background-color: #bee0ff;
+
+}
+
+.swiper {
+    margin: 0 auto;
+    padding-top: 80px;
     width: 750px;
     height: 300px;
-    z-index: 1;
+    z-index: 2;
+}
 
+.cname {
+    font-family: "华文行楷";
+    font-size: 2em;
+}
+
+.book_jianjie {
+    width: 400px;
+    height: 200px;
+    float: left;
+    margin: 0 40px;
+    padding-top: 20px;
+
+}
+
+.img {
+    width: 160px;
+    height: 200px;
+    overflow: hidden;
+    float: left;
+    z-index: 5;
+}
+
+.img:hover {
+    transform: scale(1.3, 1.3);
+}
+
+#ccc {
+    background-size: cover;
+    width: 120px;
+    height: 150px;
+    float: left;
+    margin-top: 20px;
+    transition: scale 1.5s;
+    position: relative;
+    /*margin-top: -35px;*/
+
+}
+
+.content {
+    width: 230px;
+    height: 126px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    float: left;
+}
+
+#bookname {
+    font-family: "华文行楷";
+    font-size: 1.5em;
 }

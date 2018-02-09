@@ -22,6 +22,16 @@ class Size(models.Model):
         return self.size
 
 
+class States(models.Model):
+    class Meta:
+        db_table = 'states'
+
+    state = models.CharField(r'图书状态', max_length=10)
+
+    def __str__(self):
+        return self.state
+
+
 class BookName(models.Model):
     class Meta:
         db_table = 'bookname'
@@ -34,6 +44,7 @@ class BookName(models.Model):
     img = models.ImageField(upload_to='static/bookshop/img')
     bfsize = models.ForeignKey(Size, on_delete=models.CASCADE, db_column="分类字数")
     cfname = models.ForeignKey(Classification, on_delete=models.CASCADE, db_column="类名")
+    bstates = models.ForeignKey(States, on_delete=models.CASCADE, db_column="图书状态")
 
     def __str__(self):
         return self.bname
@@ -56,7 +67,9 @@ class Chapter(models.Model):
 class Lunbo(models.Model):
     class Meta:
         db_table = 'lunbo'
-    name=models.CharField(r'图片名',max_length=20)
-    img = models.ImageField(r'轮播图片',upload_to='static/bookshop/img/lunbo')
+
+    name = models.CharField(r'图片名', max_length=20)
+    img = models.ImageField(r'轮播图片', upload_to='static/bookshop/img/lunbo')
+
     def __str__(self):
         return self.name

@@ -1,6 +1,5 @@
 window.onload = function () {
     var mySwiper = new Swiper('.swiper-container', {
-        // direction: 'horizontal',
         loop: true,
         speed: 300,
         autoplay: true,
@@ -12,8 +11,6 @@ window.onload = function () {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-
-
     })
 }
 

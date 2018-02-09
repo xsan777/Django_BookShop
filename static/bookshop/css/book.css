@@ -7,7 +7,7 @@
 .nav {
     width: 100%;
     height: 4rem;
-    background-color: #65b2f1;
+    background-color: #3e3d43;
     position: fixed;
     top: 0;
 
@@ -43,7 +43,7 @@ nav ul li {
     margin-right: 10px;
     width: 50px;
     height: 2.5rem;
-    background-color: #88caff;
+    background-color: #ffffff;
     float: left;
     border-radius: 20px;
     transition: scale 1.5s;
@@ -57,7 +57,7 @@ nav ul li {
 
 nav ul li a {
     display: block;
-    color: white;
+    color: #001730;
     margin-left: 8px;
     text-align: center;
     line-height: 2.5rem;
@@ -75,8 +75,8 @@ nav ul li a:hover {
 }
 
 /*背景图片*/
-.bg_img {
-    background-image: url("/static/bookshop/img/background.jpg");
+.bj {
+    background-image: url("/static/bookshop/img/bookbj.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: cover;
@@ -86,4 +86,53 @@ nav ul li a:hover {
     height: 100%;
     z-index: -1;
     background-attachment: fixed;
+}
+/*内容布局*/
+.box{
+ width: 980px;
+    height: 180px;
+    padding: 0px 10px;
+    margin: 150px auto 0 auto;
+}
+.img{
+    width:600px;
+    height: 250px;
+    margin: 20px auto 0px auto;
+    overflow: hidden;
+}
+img{
+    float: left;
+    width: 180px;
+    height: 210px;
+    margin-right: 20px;
+}
+.content{
+    float: left;
+}
+#name{
+    font-family: "华文行楷";
+    font-size: 2.5em;
+}
+#zong{
+    font-family: "华文行楷";
+    font-size: 0.6em;
+}
+#count{
+        text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+}
+
+#list{
+    width: 315px;
+    height:1em;
+    float: left;
+    margin-left: 10px;
+    margin-top: 20px;
+    color: black;
+}
+
+#list:hover{
+    color: red;
 }

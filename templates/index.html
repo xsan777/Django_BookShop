@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% block head %}
     <script type="text/javascript" src="/static/bookshop/js/swiper-4.1.0.min.js"></script>
     <link rel="stylesheet" href="/static/bookshop/css/swiper-4.1.0.min.css">
@@ -6,12 +6,15 @@
     <script src="/static/bookshop/js/index.js"></script>
 {% endblock head %}
 {% block content %}
+    <div class="box1">
+    <div class="zuixin">
+        <div id="zuihuo">最火</div>
+    </div>
     <div class="swiper">
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 {% for foo in lunbo %}
                     <div class="swiper-slide"><img id="lunbo" src="{{ foo.img }}" alt="轮播图"></div>
-
                 {% endfor %}
             </div>
             {#导航分页器#}
@@ -21,12 +24,41 @@
             <div class="swiper-button-next" id="wheel_button"></div>
         </div>
     </div>
+    <div class="book">
 
-    {#取出所有书名#}
-    {#{% for item in book %}#}
-    {#    <a href="book/{{ item.id }}/"><li>{{ item.bname }}</li></a>#}
-    {#    <img src="{{ item.img }}" alt="1111">#}
-    {#{% endfor %}#}
+        <div class="cname">{{ classify1 }}</div>
+        <hr>
+        {% for i in book1 %}
+            <div class="book_jianjie">
+                <a href="">
+                    <div class="img">
+                        <img id="ccc" src="{{ i.img }}" alt="{{ i.bname }}"/></div>
+                </a>
+                <p id="bookname">{{ i.bname }}</p>
+                <p id="author">作者：{{ i.bauthor }}</p>
+                <p class="state">状态：{{ i.bstates }}</p>
+                <div class="content">
+                    {{ i.bintroduction }}
+                </div>
+            </div>
+        {% endfor %}
 
 
+     <div class="cname">{{ classify2 }}</div>
+        <hr>
+        {% for i in book2 %}
+            <div class="book_jianjie">
+                <a href="">
+                    <div class="img">
+                        <img id="ccc" src="{{ i.img }}" alt="{{ i.bname }}"/></div>
+                </a>
+                <p id="bookname">{{ i.bname }}</p>
+                <p id="author">作者：{{ i.bauthor }}</p>
+                <p class="state">状态：{{ i.bstates }}</p>
+                <div class="content">
+                    {{ i.bintroduction }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock content %}

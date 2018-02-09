@@ -2,15 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ book_name }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/bookshop/css/book.css"/>
+    <title>{{ book_name.bname }}</title>
 </head>
 <body>
-{#取出所有章节名#}
-{% for item in chapter %}
-    <a href="/chapter/{{ item.id }}/"><li>{{ item.clist }}</li></a>
 
-
-{% endfor %}
+<div class="nav">
+    <nav>
+        <ul>
+            <li>
+                <a id="logo" href="http://127.0.0.1:8000"><strong>Xsan书城</strong></a>
+            </li>
+            <div class="classify">
+                {% for foo in classify %}
+                    <div id="classify">
+                        <li>
+                            <a href="#"><strong>{{ foo.cname }}</strong></a>
+                        </li>
+                    </div>
+                {% endfor %}
+            </div>
+        </ul>
+    </nav>
+</div>
+<div class="box">
+    <div class="img">
+        <img src="/{{ book_name.img }}" alt=" {{ book_name.bname }}"/>
+        <div class="conut">
+            <p id="name">{{ book_name.bname }}</p>
+            <p id="author">作者：{{ book_name.bauthor }}</p>
+            <p id="states">状态：{{ book_name.bstates }}</p>
+            <p id="count">{{ book_name.bintroduction }}</p>
+        </div>
+    </div>
+    <p id="name">目录 <span id="zong">(共{{ count }}章)</span></p>
+    <hr>
+    {% for item in chapter %}
+        <a id="list"  href="/chapter/{{ item.id }}/">
+            <p >{{ item.clist }}</p>
+        </a>
+    {% endfor %}
+</div>
 
 </body>
 </html>

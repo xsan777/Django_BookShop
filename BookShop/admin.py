@@ -31,3 +31,6 @@ class Size(admin.ModelAdmin):
 @admin.register(Lunbo)
 class Lunbo(admin.ModelAdmin):
     list_display = ['img']
+@admin.register(States)
+class Lunbo(admin.ModelAdmin):
+    list_display = ['state']

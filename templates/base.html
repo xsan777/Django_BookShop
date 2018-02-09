@@ -1,10 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-
     <link rel="stylesheet" href="/static/bookshop/css/base.css"/>
     <title>{{ title }}</title>
     {% block head %}
@@ -16,17 +15,18 @@
     <nav>
         <ul>
             <li>
-                <a id="logo" href="#"><strong>Xsan书城</strong></a>
+                <a id="logo" href=""><strong>Xsan书城</strong></a>
             </li>
             <div class="classify">
 
                 {% for foo in classify %}
                     <div id="classify">
-                    <li>
+                        <li>
 
                             <a href="#"><strong>{{ foo.cname }}</strong></a>
 
-                    </li>  </div>
+                        </li>
+                    </div>
                 {% endfor %}
             </div>
         </ul>
