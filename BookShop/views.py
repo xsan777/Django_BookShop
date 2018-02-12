@@ -6,6 +6,7 @@ from django.core.paginator import Paginator
 
 # 列出书名，并超链接到章节目录
 def index(request):
+
     lunbo = Lunbo.objects.all()
     classify = Classification.objects.all()
     classify1 = Classification.objects.get(id=1)
@@ -22,12 +23,11 @@ def index(request):
     book5 = BookName.objects.filter(cfname_id=5)[0:5]
     book6 = BookName.objects.filter(cfname_id=6)[0:5]
     book7 = BookName.objects.filter(cfname_id=7)[0:5]
-
     return render(request, 'index.html',
                   {'book': book, 'lunbo': lunbo, 'classify': classify, 'classify1': classify1, 'title': '首页',
                    'classify2': classify2, 'classify3': classify3, 'classify4': classify4, 'classify5': classify5,
                    'classify6': classify6, 'classify7': classify7, 'book1': book1, 'book2': book2, 'book3': book3,
-                   'book4': book4, 'book5': book5, 'book6': book6, 'book7': book7})
+                   'book4': book4, 'book5': book5, 'book6': book6, 'book7': book7,})
 def classify(request,classify_id,page_id):
     classify = Classification.objects.all()
     classify1=classify_id

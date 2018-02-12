@@ -41,7 +41,7 @@ class BookName(models.Model):
     bcomment = models.TextField(r'评论', null=True, blank=True, db_column="评论")
     bauthor = models.CharField(r'作者', max_length=18, db_column="作者", db_index=True)
     bsize = models.IntegerField(r'字数', db_column="字数")
-    img = models.ImageField(upload_to='static/bookshop/img')
+    img = models.ImageField(upload_to='static/bookshop/img',null=True,blank=True)
     bfsize = models.ForeignKey(Size, on_delete=models.CASCADE, db_column="分类字数")
     cfname = models.ForeignKey(Classification, on_delete=models.CASCADE, db_column="类名")
     bstates = models.ForeignKey(States, on_delete=models.CASCADE, db_column="图书状态")
@@ -67,9 +67,9 @@ class Chapter(models.Model):
 class Lunbo(models.Model):
     class Meta:
         db_table = 'lunbo'
-
-    name = models.CharField(r'图片名', max_length=20)
+    name=models.ForeignKey(BookName,on_delete=models.DO_NOTHING)
+    name1 = models.CharField(r'图片名', max_length=20)
     img = models.ImageField(r'轮播图片', upload_to='static/bookshop/img/lunbo')
 
     def __str__(self):
-        return self.name
+        return self.name1

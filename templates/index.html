@@ -19,7 +19,7 @@
                     {% for foo in lunbo %}
 
 
-                            <div class="swiper-slide"><a href="/book/"> <img id="lunbo" src="{{ foo.img }}" alt="轮播图"></a></div>
+                            <div class="swiper-slide"><a href="/book/{{ foo.name.id }}"> <img id="lunbo" src="{{ foo.img }}" alt="轮播图"></a></div>
 
                     {% endfor %}
                 </div>
@@ -40,7 +40,7 @@
                 <div class="book_jianjie">
                     <a href="/book/{{ i.id }}/">
                         <div class="img">
-                            <img id="ccc" src="{{ i.img }}" alt="{{ i.bname }}"/></div>
+                            <img id="ccc" src="{{i.img }}" alt="{{ i.bname }}"/></div>
                         <p id="bookname">{{ i.bname }}</p>
                     </a>
 
@@ -56,6 +56,92 @@
             <div class="cname">{{ classify2 }}</div>
             <hr>
             {% for i in book2 %}
+                <div class="book_jianjie">
+                    <a href="">
+                        <div class="img">
+                            <img id="ccc" src="{{ i.img }}" alt="{{ i.bname }}"/></div>
+                    </a>
+                    <p id="bookname">{{ i.bname }}</p>
+                    <p id="author">作者：{{ i.bauthor }}</p>
+                    <p class="state">状态：{{ i.bstates }}</p>
+                    <div class="content">
+                        {{ i.bintroduction }}
+                    </div>
+                </div>
+            {% endfor %}
+
+
+         <div class="cname">{{ classify3 }}</div>
+            <hr>
+            {% for i in book3 %}
+                <div class="book_jianjie">
+                    <a href="">
+                        <div class="img">
+                            <img id="ccc" src="{{ i.img }}" alt="{{ i.bname }}"/></div>
+                    </a>
+                    <p id="bookname">{{ i.bname }}</p>
+                    <p id="author">作者：{{ i.bauthor }}</p>
+                    <p class="state">状态：{{ i.bstates }}</p>
+                    <div class="content">
+                        {{ i.bintroduction }}
+                    </div>
+                </div>
+            {% endfor %}
+
+         <div class="cname">{{ classify4 }}</div>
+            <hr>
+            {% for i in book4 %}
+                <div class="book_jianjie">
+                    <a href="">
+                        <div class="img">
+                            <img id="ccc" src="{{ i.img }}" alt="{{ i.bname }}"/></div>
+                    </a>
+                    <p id="bookname">{{ i.bname }}</p>
+                    <p id="author">作者：{{ i.bauthor }}</p>
+                    <p class="state">状态：{{ i.bstates }}</p>
+                    <div class="content">
+                        {{ i.bintroduction }}
+                    </div>
+                </div>
+            {% endfor %}
+
+         <div class="cname">{{ classify5 }}</div>
+            <hr>
+            {% for i in book5 %}
+                <div class="book_jianjie">
+                    <a href="">
+                        <div class="img">
+                            <img id="ccc" src="{{ i.img }}" alt="{{ i.bname }}"/></div>
+                    </a>
+                    <p id="bookname">{{ i.bname }}</p>
+                    <p id="author">作者：{{ i.bauthor }}</p>
+                    <p class="state">状态：{{ i.bstates }}</p>
+                    <div class="content">
+                        {{ i.bintroduction }}
+                    </div>
+                </div>
+            {% endfor %}
+
+         <div class="cname">{{ classify6 }}</div>
+            <hr>
+            {% for i in book6 %}
+                <div class="book_jianjie">
+                    <a href="">
+                        <div class="img">
+                            <img id="ccc" src="{{ i.img }}" alt="{{ i.bname }}"/></div>
+                    </a>
+                    <p id="bookname">{{ i.bname }}</p>
+                    <p id="author">作者：{{ i.bauthor }}</p>
+                    <p class="state">状态：{{ i.bstates }}</p>
+                    <div class="content">
+                        {{ i.bintroduction }}
+                    </div>
+                </div>
+            {% endfor %}
+
+         <div class="cname">{{ classify7 }}</div>
+            <hr>
+            {% for i in book7 %}
                 <div class="book_jianjie">
                     <a href="">
                         <div class="img">
