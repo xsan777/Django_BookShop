@@ -1,0 +1,120 @@
+.box1 {
+    padding: 10px;
+    height: 900px;
+    width: 980px;
+    margin: 100px auto 0 auto;
+    background-color: #65b2f1;
+}
+
+#top {
+    margin: 20px auto;
+    width: 95%;
+    size: 5px;
+    border-top: 3px solid black;
+
+}
+
+.book_jianjie {
+    width: 800px;
+    height: 180px;
+    float: left;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-left: 40px;
+
+}
+
+.book_jianjie:hover {
+    transform: translate(20px, 0);
+    -ms-transform: translate(20px, 0); /* IE 9 */
+    -webkit-transform: translate(20px, 0); /* Safari and Chrome */
+    box-shadow: 0px 10px 30px #888888;
+}
+
+.img {
+    margin-left: 20px;
+    width: 160px;
+    height: 200px;
+    overflow: hidden;
+    float: left;
+    z-index: 5;
+}
+
+.img:hover {
+    transform: scale(1.3, 1.3);
+}
+
+#ccc {
+    background-size: cover;
+    width: 120px;
+    height: 150px;
+    float: left;
+    margin-top: 20px;
+    transition: scale 1.5s;
+    position: relative;
+    /*margin-top: -35px;*/
+
+}
+
+.content {
+    width: 600px;
+    height: 55px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    float: left;
+}
+
+#test {
+    line-height: 30px;
+}
+
+#bookname {
+    margin: 15px 0 5px 0;
+    font-family: "华文行楷";
+    font-size: 2em;
+}
+
+#bookname:hover {
+    transform: scale(1.1, 1.1);
+}
+.bottombox{
+    margin:50px auto;
+    height: 10px;
+    width: 900px;
+}
+
+#bottom {
+    margin: 0px auto;
+    width: 90%;
+    size: 5px;
+    border-top: 1px solid #7a9291;
+}
+
+a {
+    text-decoration: none;
+}
+/*分页*/
+.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 30px auto;
+}
+
+.pagination li {display: inline;}
+
+.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/*.pagination li a.active {*/
+    /*background-color: #4CAF50;*/
+    /*color: white;*/
+/*}*/
+
+ul.pagination li a:hover:not(.active) {background-color: #ddd;}

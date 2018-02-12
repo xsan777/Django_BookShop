@@ -131,6 +131,7 @@ img{
     margin-left: 10px;
     margin-top: 20px;
     color: black;
+    text-decoration: none;
 }
 
 #list:hover{

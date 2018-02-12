@@ -96,4 +96,8 @@
 #bookname {
     font-family: "华文行楷";
     font-size: 1.5em;
+      /*text-decoration: none;*/
+}
+.book_jianjie a{
+    text-decoration: none;
 }

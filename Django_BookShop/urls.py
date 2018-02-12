@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index,name='index'),
     re_path(r'^book/(?P<book_id>(\d+))/$',views.book),
-    re_path(r'^chapter/(?P<chapter_id>(\d+))/',views.chapter)
+    re_path(r'^book/(?P<book_id>(\d+))/chapter/(?P<chapter_id>(\d+))/$',views.chapter),
+    re_path(r'classify/(?P<classify_id>(\d+))/(?P<page_id>(\d+))/$',views.classify)
 ]

@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import *
+from django.core.paginator import Paginator
 
 # Create your views here.
 
@@ -27,6 +28,22 @@ def index(request):
                    'classify2': classify2, 'classify3': classify3, 'classify4': classify4, 'classify5': classify5,
                    'classify6': classify6, 'classify7': classify7, 'book1': book1, 'book2': book2, 'book3': book3,
                    'book4': book4, 'book5': book5, 'book6': book6, 'book7': book7})
+def classify(request,classify_id,page_id):
+    classify = Classification.objects.all()
+    classify1=classify_id
+
+    books=BookName.objects.filter(cfname=classify1)
+    paginator=Paginator(books,1)
+    page= paginator.page(page_id)
+    classify_name=Classification.objects.get(id=classify_id)
+    pagenum = int(page_id)
+    page_next=pagenum+1
+    page_last=pagenum-1
+    if page_last==0:
+        page_last=1
+    if page_next>paginator.num_pages:
+        page_next =paginator.num_pages
+    return render(request,'classify.html',{'books':page,'classify_name':classify_name,'classify':classify,'page_next':page_next,'page_last':page_last})
 
 
 # 列出章节目录
@@ -36,17 +53,30 @@ def book(request, book_id):
     name = BookName.objects.get(id=bid)
     chapter = Chapter.objects.filter(cbook=bid)
     count=chapter.count()
-    return render(request, 'book.html', {'classify':classify ,'book_name': name, 'chapter': chapter,'count':count,})
+    return render(request, 'book.html', {'classify':classify ,'book_name': name, 'chapter': chapter,'count':count,'bid':bid})
 
 
-def chapter(request, chapter_id):
+def chapter(request, chapter_id,book_id):
     classify = Classification.objects.all()
     cid = chapter_id
+    cidi=int(cid)
+    bid=book_id
+    chapter_content= Chapter.objects.filter(cbook=bid).count()
     chapter = Chapter.objects.get(id=cid)
+    zuihou=''
+    cid1=cidi+1
+    cid2=cidi-1
+    if cid2==0:
+        cid2=1
+    if cidi==chapter_content:
+        cid1=chapter_content
+        zuihou='本书以读完，谢谢品读'
+    next_c=str(cid1)
+    last_c=str(cid2)
     content = chapter.ccontent
     # 访问量
     chapter.views = chapter.views + 1
     chapter.save()
 
-    return render(request, 'content.html', {'classify':classify ,'chapter': chapter, 'content': content,'cid':cid})
+    return render(request, 'content.html', {'classify':classify ,'chapter': chapter, 'content': content,'cid':cid,'blink':book_id,'next_c':next_c,'last_c':last_c,'zui':zuihou})
 

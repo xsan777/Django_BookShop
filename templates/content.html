@@ -5,9 +5,21 @@
 {% block content %}
 
     <div class="content">
-    <span id="bookname">书名：{{ chapter.cbook }}</span>
-    <p id="list_name">{{ chapter.clist }}</p>
-        <pre>{{ content }}</pre>
-    </div>
+        <a href="/book/{{ blink }}/"> <span id="bookname">书名：{{ chapter.cbook }}</span> </a>
 
+        <p id="list_name">{{ chapter.clist }}</p>
+        <pre>{{ content }}</pre>
+        <div class="button">
+            <a href="/book/{{ blink }}/chapter/{{ last_c }}/" class="button">
+                <span id="left">  上一章 </span>
+            </a>
+            <a href="/book/{{ blink }}/" class="button">
+                <span id="left"> 目录 </span>
+            </a>
+            <a href="/book/{{ blink }}/chapter/{{ next_c }}/" class="button">
+                <span id="right"> 下一章</span>
+            </a>
+            <span> {{ zui }}</span>
+        </div>
+    </div>
 {% endblock %}

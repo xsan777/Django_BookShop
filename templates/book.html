@@ -12,13 +12,13 @@
     <nav>
         <ul>
             <li>
-                <a id="logo" href="http://127.0.0.1:8000"><strong>Xsan书城</strong></a>
+                <a id="logo" href="/"><strong>Xsan书城</strong></a>
             </li>
             <div class="classify">
                 {% for foo in classify %}
                     <div id="classify">
                         <li>
-                            <a href="#"><strong>{{ foo.cname }}</strong></a>
+                            <a href="/classify/{{ foo.id }}/1/"><strong>{{ foo.cname }}</strong></a>
                         </li>
                     </div>
                 {% endfor %}
@@ -39,8 +39,8 @@
     <p id="name">目录 <span id="zong">(共{{ count }}章)</span></p>
     <hr>
     {% for item in chapter %}
-        <a id="list"  href="/chapter/{{ item.id }}/">
-            <p >{{ item.clist }}</p>
+        <a id="list" href="/book/{{ bid }}/chapter/{{ item.id }}/">
+            <p>{{ item.clist }}</p>
         </a>
     {% endfor %}
 </div>
