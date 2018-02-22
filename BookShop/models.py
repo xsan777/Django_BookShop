@@ -2,6 +2,7 @@ from django.db import models
 
 
 # Create your models here.
+# 分类表
 class Classification(models.Model):
     class Meta:
         db_table = 'classification'
@@ -12,16 +13,7 @@ class Classification(models.Model):
         return self.cname
 
 
-class Size(models.Model):
-    class Meta:
-        db_table = 'size'
-
-    size = models.CharField(r'字数分类', max_length=18, db_column="字数分类")
-
-    def __str__(self):
-        return self.size
-
-
+# 图书状态表
 class States(models.Model):
     class Meta:
         db_table = 'states'
@@ -32,6 +24,7 @@ class States(models.Model):
         return self.state
 
 
+# 图书表
 class BookName(models.Model):
     class Meta:
         db_table = 'bookname'
@@ -40,9 +33,9 @@ class BookName(models.Model):
     bintroduction = models.CharField(r'简介', max_length=3000, db_column="简介")
     bcomment = models.TextField(r'评论', null=True, blank=True, db_column="评论")
     bauthor = models.CharField(r'作者', max_length=18, db_column="作者", db_index=True)
-    bsize = models.IntegerField(r'字数', db_column="字数")
-    img = models.ImageField(upload_to='static/bookshop/img',null=True,blank=True)
-    bfsize = models.ForeignKey(Size, on_delete=models.CASCADE, db_column="分类字数")
+    # bsize = models.IntegerField(r'字数', db_column="字数")
+    img = models.ImageField(upload_to='static/bookshop/img', null=True, blank=True)
+    # bfsize = models.ForeignKey(Size, on_delete=models.CASCADE, db_column="分类字数")
     cfname = models.ForeignKey(Classification, on_delete=models.CASCADE, db_column="类名")
     bstates = models.ForeignKey(States, on_delete=models.CASCADE, db_column="图书状态")
 
@@ -50,6 +43,7 @@ class BookName(models.Model):
         return self.bname
 
 
+# 章节表
 class Chapter(models.Model):
     class Meta:
         db_table = 'chapter'
@@ -64,10 +58,12 @@ class Chapter(models.Model):
         return self.clist
 
 
+# 轮播图表
 class Lunbo(models.Model):
     class Meta:
         db_table = 'lunbo'
-    name=models.ForeignKey(BookName,on_delete=models.DO_NOTHING)
+
+    name = models.ForeignKey(BookName, on_delete=models.DO_NOTHING)
     name1 = models.CharField(r'图片名', max_length=20)
     img = models.ImageField(r'轮播图片', upload_to='static/bookshop/img/lunbo')
 

@@ -80,8 +80,9 @@
 #bookname:hover {
     transform: scale(1.1, 1.1);
 }
-.bottombox{
-    margin:50px auto;
+
+.bottombox {
+    margin: 50px auto;
     height: 10px;
     width: 900px;
 }
@@ -96,6 +97,7 @@
 a {
     text-decoration: none;
 }
+
 /*分页*/
 .pagination {
     display: inline-block;
@@ -103,7 +105,9 @@ a {
     margin: 30px auto;
 }
 
-.pagination li {display: inline;}
+.pagination li {
+    display: inline;
+}
 
 .pagination li a {
     color: black;
@@ -113,8 +117,10 @@ a {
 }
 
 /*.pagination li a.active {*/
-    /*background-color: #4CAF50;*/
-    /*color: white;*/
+/*background-color: #4CAF50;*/
+/*color: white;*/
 /*}*/
 
-ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+ul.pagination li a:hover:not(.active) {
+    background-color: #ddd;
+}

@@ -1,32 +1,36 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-nav{
+
+nav {
     margin: 0 auto;
     width: 80%;
     height: 4rem;
     /*background-color: rgb(0,0,0);*/
     /*opacity: 0.2*/
 }
-nav ul{
+
+nav ul {
     list-style-type: none;
-     overflow: hidden;
+    overflow: hidden;
     margin-left: 5%;
 }
-nav ul li{
+
+nav ul li {
     float: left;
     margin-left: 3%;
 }
-nav ul li a{
+
+nav ul li a {
     display: block;
     color: red;
     text-align: center;
     line-height: 4rem;
 
-
     text-decoration: none;
 }
-#logo{
+
+#logo {
     font-size: 2rem;
 }

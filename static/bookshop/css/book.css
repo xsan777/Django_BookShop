@@ -87,46 +87,53 @@ nav ul li a:hover {
     z-index: -1;
     background-attachment: fixed;
 }
+
 /*内容布局*/
-.box{
- width: 980px;
+.box {
+    width: 980px;
     height: 180px;
     padding: 0px 10px;
     margin: 150px auto 0 auto;
 }
-.img{
-    width:600px;
+
+.img {
+    width: 600px;
     height: 250px;
     margin: 20px auto 0px auto;
     overflow: hidden;
 }
-img{
+
+img {
     float: left;
     width: 180px;
     height: 210px;
     margin-right: 20px;
 }
-.content{
+
+.content {
     float: left;
 }
-#name{
+
+#name {
     font-family: "华文行楷";
     font-size: 2.5em;
 }
-#zong{
+
+#zong {
     font-family: "华文行楷";
     font-size: 0.6em;
 }
-#count{
-        text-overflow: ellipsis;
+
+#count {
+    text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 7;
     -webkit-box-orient: vertical;
 }
 
-#list{
+#list {
     width: 315px;
-    height:1em;
+    height: 1em;
     float: left;
     margin-left: 10px;
     margin-top: 20px;
@@ -134,6 +141,6 @@ img{
     text-decoration: none;
 }
 
-#list:hover{
+#list:hover {
     color: red;
 }

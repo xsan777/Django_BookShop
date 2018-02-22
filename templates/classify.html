@@ -26,14 +26,12 @@
                 <hr id="bottom">
             </div>
         {% endfor %}
-{#        <div class="fenye">#}
-            <ul class="pagination">
-                <li><a href="/classify/1/{{ page_last }}/">«</a></li>
-                {% for index in books.paginator.page_range %}
-                    <li><a href="/classify/1/{{ index }}/">{{ index }}</a></li>
-                {% endfor %}
-                <li><a href="/classify/1/{{ page_next }}/">»</a></li>
-            </ul>
-{#        </div>#}
+        <ul class="pagination">
+            <li><a href="/classify/1/{{ page_last }}/">«</a></li>
+            {% for index in books.paginator.page_range %}
+                <li><a href="/classify/1/{{ index }}/">{{ index }}</a></li>
+            {% endfor %}
+            <li><a href="/classify/1/{{ page_next }}/">»</a></li>
+        </ul>
     </div>
 {% endblock %}
